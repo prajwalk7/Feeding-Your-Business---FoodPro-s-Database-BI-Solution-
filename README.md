@@ -1,5 +1,5 @@
 # FoodPro---Online-Food-Delivery-Database-Management-System-and-Analytics
-1. Problem Statement
+## 1. Problem Statement
 
 The objective of the study was to build a robust data management system for an online food ordering/delivery application called FoodPro. The system is to handle both transactional data (payment and order information) and Reference Data (User Account data, Address Information etc), and should be the single source of information about anything related to order customer, restaurant, and the delivery agents. 
 
@@ -7,12 +7,12 @@ We were able to not only implement the system but also utilise the power of anal
 
 The whole development was done iteratively rather than in a waterfall flow, the EER/UML diagram was revisited to accommodate for the information which was made visible at the later stages of development of the system. This enabled us to explore a multitude of solutions prior agreeing on a particular pathway and increased our learning greatly in the process. (Please see the report or the PPT to get into greater detail)
 
-2. Conceptual Data Model/UML Diagram
+## 2. Conceptual Data Model/UML Diagram
 
 ![image](https://user-images.githubusercontent.com/35379830/215352262-89563070-dad0-4100-9f94-32d0ac9e7536.png)
 ![image](https://user-images.githubusercontent.com/35379830/215352274-caf6321b-6ec1-438e-a965-490027378dc8.png)
 
-3. Mapping Conceptual Data Aodel to Relational Model:
+## 3. Mapping Conceptual Data Aodel to Relational Model:
 
 Relation – 1: 
 address (address_id, building_no, street_name, floor, city, zipcode) (each user_account, 
@@ -116,12 +116,12 @@ the FoodPro app, who would be delivering the orders placed by the user accounts.
 delivery_agent_id is the primary key 
 address_id is the foreign key referring to the primary key of the relation address – NOT NULL
 
-4. Creating the database in MySQL and running analytical queries
+## 4. Creating the database in MySQL and running analytical queries
 
 After normalising to 3.5NF, I ran multiple advanced SQL queries to analyse the sales of the delivery platform and ideation about future strategies. Here's an example query (mini week-wise balance sheet and look at the revenue numbers)
 ![image](https://user-images.githubusercontent.com/35379830/215352363-c813afc7-edcc-4925-accb-3ebd45bbaae6.png)
 
-5. NoSQL - MongoDB Queries
+## 5. NoSQL - MongoDB Queries
 
 Post SQL queries, I connected the database to MongoDB to implement NoSQL features as well. Here's an example aggregation query (calculates the count of the payment methods used, and the aggregate value of the amount paid, for order values of over 250!)
 
@@ -129,7 +129,7 @@ Post SQL queries, I connected the database to MongoDB to implement NoSQL feature
 ![image](https://user-images.githubusercontent.com/35379830/215352434-a8df4025-9377-41a8-81ad-11822e7482b9.png)
 ![image](https://user-images.githubusercontent.com/35379830/215352437-c3d2fb37-3fda-4e40-997e-d755013b83ad.png)
 
-6. Connecting to Python - Advanced visual analytics
+## 6. Connecting to Python - Advanced visual analytics
 
 Post NoSQL analysis, the databsase was connected to Python environment to run more advanced visual analytics (few examples shown below):
 ![image](https://user-images.githubusercontent.com/35379830/215352468-8562c9ed-ad9b-4086-a79a-2bf6277971b3.png)
@@ -143,9 +143,7 @@ Here, I visualize the change in revenue/profit by looking at the income
 ![image](https://user-images.githubusercontent.com/35379830/215352558-e8b92c7f-3ef0-4405-b9c4-b944df643a4d.png)
 ![image](https://user-images.githubusercontent.com/35379830/215352570-99357283-e2f6-4476-ab03-6ec5765ccef4.png)
 
-
-
-7. Summary and Recommendation
+## 7. Summary and Recommendation
 
 I was able to successfully implement a database system which was robust for both kinds of 
 transactions – transactional and referential in nature. The MySQL database and the MongoDB tie up 

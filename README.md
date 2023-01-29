@@ -20,12 +20,14 @@ delivery_agent, and a restaurant can have a single unique address and not multip
 The address relation contains the address information of the people involved in the FoodPro app –
 users, restaurants, and the delivery agents.
 address_id is the primary_key
+
 Relation – 2:
 user_account (user_account_id, dob, email, phone_no, name, age, address_id)
 The user_account relation contains the information of the user who would be creating an account 
 with the FoodPro application and use the user account details to make an order.
 user_account_id is the primary key 
 address_id is the foreign key referencing the primary key of the relation address – NOT NULL
+
 Relation – 3:
 user_account_food_preference (food_preference_type, user_account_id) (ER diagram’s multi 
 values attribute’s relation)
@@ -35,11 +37,13 @@ one preference to be selected)
 Food_preference_type, user_account_id – both together form the primary key
 user_account_id is the foreign key referring to the primary key of the relation user_account - NOT 
 NULL
+
 Relation – 4:
 free_account (user_account_id)
 Specialisation of relation Account. 
 user_account_id is the primary key; also, it is the foreign key referencing the user_account parent 
 class – NOT NULL
+
 Relation – 5:
 gold_account (user_account_id, start_date, renewal_date, discount_id)
 Specialisation of the relation user_account. Gold account refers to a subscription based membership 
@@ -49,11 +53,13 @@ discount_id is the foreign key referencing the primary key of the relation disco
 NOT NULL
 user_account_id is the primary key; also, it is the foreign key referencing the user_account parent 
 class – NOT NULL
+
 Relation – 6:
 discount (discount_id, discount_percent, subscription_fee, discount_name)
 The discount relation contains the information about the different discounts offered to the gold user 
 based on the subscription package they opted for.
 discount_id is the primary key
+
 Relation – 7:
 payment (payment_id, payment_method, payment_timestamp, amount_paid, order_id, 
 user_account_id)
@@ -63,6 +69,7 @@ payment_id is the primary key
 user_account_id is the foreign key referring to the primary key of the relation user_account – NOT 
 NULL
 order_id is the foreign key referring to the relation order – NOT NULL
+
 Relation – 8:
 order_details (order_id, menu_id , item_id, quantity, user_account_id, cost) (This if for the order 
 details aggregation)
@@ -73,6 +80,7 @@ user_account_id is the foreign key referring to the primary key of the relation 
 item_id is the foreign key referring to the primary key of the relation menu item 
 menu_id is the foreign key referring to the primary key of the relation menu (as menu item is a 
 weak entity)
+
 Relation – 9:
 orders (order_id, order_timestamp, delivery_agent_id, restaurant_id, discount_id)
 The order relation contains the information of the individual order.
@@ -82,18 +90,21 @@ delivery_agent_id is the foreign key referring to the primary key of the relatio
 NOT NULL
 discount_id is the foreign key referring to the primary key of the relation discount – can be NULL 
 (not applicable)
+
 Relation – 10:
 menu (menu_id, restaurant_id) 
 The menu relation contains the information of the menu which is associated with a particular 
 restaurant.
 menu_id is the primary key
 restaurant_id is the foreign key referring to the primary key of the relation restaurant – NOT NULL 
+
 Relation – 11:
 menu_item (menu_id, item_id, item_name, calorie_count, item_type, price)
 The menu_item relation contains the information of items in a particular menu. It is a weak entity 
 (according to the ER diagram), so it borrows the primary key from the menu relation.
 menu_id, item_id together form the primary key
 menu_id is the foreign key referring to the primary key of the relation menu – NOT NULL
+
 Relation – 12:
 menu_item_category (menu_id, item_id, item_category)
 The menu_item_category relation contains the information of category (veg, non-veg, egg, keto, 
@@ -102,6 +113,7 @@ menu_id, item_id, item_category together form the primary key
 menu_id is the foreign key referring to the primary key of the relation menu – NOT NULL
 menu_item_id is the foreign key referring to the primary key of the relation menu_item – NOT 
 NULL
+
 Relation – 13:
 restaurant (restaurant_id, restaurant_name, address_id) (all restaurants are cloud kitchens which 
 accept orders throughout the day)
@@ -109,6 +121,7 @@ The restaurant relation contains the information of the restaurants which are re
 FoodPro app from where the customers place the order.
 restaurant_id is the primary key 
 address_id is the foreign key referring to the primary key of the relation Address – NOT NULL
+
 Relation – 14:
 delivery_agent (delivery_agent_id, delivery_agent_name, dob, phone_no, address_id)
 The delivery_agent relation contains the information of the delivery agents who are registered with 
@@ -120,6 +133,10 @@ address_id is the foreign key referring to the primary key of the relation addre
 
 After normalising to 3.5NF, I ran multiple advanced SQL queries to analyse the sales of the delivery platform and ideation about future strategies. Here's an example query (mini week-wise balance sheet and look at the revenue numbers)
 ![image](https://user-images.githubusercontent.com/35379830/215352363-c813afc7-edcc-4925-accb-3ebd45bbaae6.png)
+![image](https://user-images.githubusercontent.com/35379830/215355773-3ef9870e-7ce4-4796-bd77-a13b22a2652b.png)
+
+Another example; here, I check the revenue generated (by orders) split based on the day of the week ![image](https://user-images.githubusercontent.com/35379830/215355762-75fc8093-5fa2-4437-b30f-25d8b2ede5fe.png)
+![image](https://user-images.githubusercontent.com/35379830/215355767-e156c8e9-d48a-4754-8342-579ff8b3a51c.png)
 
 ## 5. NoSQL - MongoDB Queries
 

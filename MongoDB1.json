@@ -1,0 +1,16 @@
+[{
+  "_id": "veg",
+  "count": 70
+},{
+  "_id": "keto",
+  "count": 30
+},{
+  "_id": "non-veg",
+  "count": 30
+},{
+  "_id": "egg",
+  "count": 29
+},{
+  "_id": "diabetes friendly",
+  "count": 20
+}]

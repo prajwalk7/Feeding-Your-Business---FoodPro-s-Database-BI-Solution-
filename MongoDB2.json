@@ -1,0 +1,53 @@
+[{
+  "_id": "Fried chicken",
+  "max_cc": "825",
+  "min_cc": "637.5"
+},{
+  "_id": "Chicken Pizza",
+  "max_cc": "825",
+  "min_cc": "637.5"
+},{
+  "_id": "Spaghetti with meatballs",
+  "max_cc": "660",
+  "min_cc": "510"
+},{
+  "_id": "Paneer Pesto",
+  "max_cc": "605",
+  "min_cc": "467.5"
+},{
+  "_id": "Veg Pizza",
+  "max_cc": "605",
+  "min_cc": "522.5"
+},{
+  "_id": "French fries",
+  "max_cc": "577.5",
+  "min_cc": "446.25"
+},{
+  "_id": "Onion rings",
+  "max_cc": "445",
+  "min_cc": "340"
+},{
+  "_id": "Baklava",
+  "max_cc": "345",
+  "min_cc": "255"
+},{
+  "_id": "Coke",
+  "max_cc": "345",
+  "min_cc": "255"
+},{
+  "_id": "Salad",
+  "max_cc": "330",
+  "min_cc": "255"
+},{
+  "_id": "Diet Coke",
+  "max_cc": "31",
+  "min_cc": "1"
+},{
+  "_id": "Giant chocolate chip cookies",
+  "max_cc": "265",
+  "min_cc": "187"
+},{
+  "_id": null,
+  "max_cc": null,
+  "min_cc": null
+}]

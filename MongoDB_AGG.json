@@ -1,0 +1,21 @@
+[{
+  "_id": "upi",
+  "total_amount_paid": 18728.985,
+  "no_of_times_used": 45
+},{
+  "_id": "debit_card",
+  "total_amount_paid": 17472.85,
+  "no_of_times_used": 44
+},{
+  "_id": "cash",
+  "total_amount_paid": 16756.219,
+  "no_of_times_used": 40
+},{
+  "_id": "credit_card",
+  "total_amount_paid": 14264.155,
+  "no_of_times_used": 35
+},{
+  "_id": "online_banking",
+  "total_amount_paid": 10807.693,
+  "no_of_times_used": 28
+}]

@@ -1,5 +1,6 @@
 # FoodPro---Online-Food-Delivery-Database-Management-System-and-Analytics
 1. Problem Statement
+
 The objective of the study was to build a robust data management system for an online food ordering/delivery application called FoodPro. The system is to handle both transactional data (payment and order information) and Reference Data (User Account data, Address Information etc), and should be the single source of information about anything related to order customer, restaurant, and the delivery agents. 
 
 We were able to not only implement the system but also utilise the power of analytics to predict optimization activities to the restaurants and the application alike. We first created an EER model, which was later translated into a UML class diagram. The relation modelling was done considering the cardinalities and the relationships mentioned in the EER diagram, and later the relations were later normalised to 3.5 Normal Form. The relational model was materialised in the form of a database inside MySQL. A NoSQL component (in the form of MongoDB) was also implemented to utilise the power of document method of storage of information and the power of NoSQL pipelines. The storage system was later connected to a Python environment which enabled advanced analytical capabilities which enables using predictive analytics to derive actionable insights. 
@@ -7,6 +8,7 @@ We were able to not only implement the system but also utilise the power of anal
 The whole development was done iteratively rather than in a waterfall flow, the EER/UML diagram was revisited to accommodate for the information which was made visible at the later stages of development of the system. This enabled us to explore a multitude of solutions prior agreeing on a particular pathway and increased our learning greatly in the process. (Please see the report or the PPT to get into greater detail)
 
 2. Conceptual Data Model/UML Diagram
+
 ![image](https://user-images.githubusercontent.com/35379830/215352262-89563070-dad0-4100-9f94-32d0ac9e7536.png)
 ![image](https://user-images.githubusercontent.com/35379830/215352274-caf6321b-6ec1-438e-a965-490027378dc8.png)
 
@@ -120,6 +122,7 @@ After normalising to 3.5NF, I ran multiple advanced SQL queries to analyse the s
 ![image](https://user-images.githubusercontent.com/35379830/215352363-c813afc7-edcc-4925-accb-3ebd45bbaae6.png)
 
 5. NoSQL - MongoDB Queries
+
 Post SQL queries, I connected the database to MongoDB to implement NoSQL features as well. Here's an example aggregation query (calculates the count of the payment methods used, and the aggregate value of the amount paid, for order values of over 250!)
 
 ![image](https://user-images.githubusercontent.com/35379830/215352429-96b3193a-9034-4895-a8f0-5fa5cc75617c.png)
@@ -127,6 +130,7 @@ Post SQL queries, I connected the database to MongoDB to implement NoSQL feature
 ![image](https://user-images.githubusercontent.com/35379830/215352437-c3d2fb37-3fda-4e40-997e-d755013b83ad.png)
 
 6. Connecting to Python - Advanced visual analytics
+
 Post NoSQL analysis, the databsase was connected to Python environment to run more advanced visual analytics (few examples shown below):
 ![image](https://user-images.githubusercontent.com/35379830/215352468-8562c9ed-ad9b-4086-a79a-2bf6277971b3.png)
 The gold subscription plan users show lesser variations in their order ranges:
@@ -140,8 +144,9 @@ Here, I visualize the change in revenue/profit by looking at the income
 ![image](https://user-images.githubusercontent.com/35379830/215352570-99357283-e2f6-4476-ab03-6ec5765ccef4.png)
 
 
-7. Summary/Recommendations
-Summary and Recommendation
+
+7. Summary and Recommendation
+
 I was able to successfully implement a database system which was robust for both kinds of 
 transactions – transactional and referential in nature. The MySQL database and the MongoDB tie up 
 together nicely as the former provides a neatly structured/normalised database to store the 

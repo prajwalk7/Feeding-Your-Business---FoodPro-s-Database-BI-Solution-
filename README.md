@@ -1,4 +1,4 @@
-# FoodPro---Online-Food-Delivery-Database-Management-System-and-Analytics
+# Feeding Your Business - FoodPro's Database/BI Solution
 ## 1. Problem Statement
 
 The objective of the study was to build a robust data management system for an online food ordering/delivery application called FoodPro. The system is to handle both transactional data (payment and order information) and Reference Data (User Account data, Address Information etc), and should be the single source of information about anything related to order customer, restaurant, and the delivery agents. 
